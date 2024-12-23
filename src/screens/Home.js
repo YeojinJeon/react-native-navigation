@@ -10,11 +10,12 @@ const StyledText = styled.Text`
     margin-bottom: 10px;
 `;
 
-const Home = () => {
+const Home = ({ navigation }) => {
     return (
         <Container>
             <StyledText>Home</StyledText>
-            <Button title="go to the list screen" />
+            <Button title="go to the list screen"
+                onPress={() => navigation.navigate('List')} />
         </Container>
     );
 };
