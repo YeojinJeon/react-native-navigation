@@ -8,10 +8,10 @@ const Stack = createStackNavigator();
 
 const StackNavigation = () => {
     return (
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="Home" screenOptions={{ cardStyle: { backgroundColor: '#ffffff' } }}>
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="List" component={List} />
-            <Stack.Screen name="Item" component={Item} />
+            <Stack.Screen name="Detail" component={Item} options={{ headerTitle: 'Item' }} />
         </Stack.Navigator>
     )
 }
