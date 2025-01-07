@@ -11,6 +11,14 @@ const StyledText = styled.Text`
 font-size:30px;
 `;
 
+export const Home = () => {
+    return (
+        <Container>
+            <StyledText>Home</StyledText>
+        </Container>
+    );
+};
+
 export const Mail = () => {
     return (
         <Container>

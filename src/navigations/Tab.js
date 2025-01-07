@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
 import { Mail, Meet, Settings } from "../screens/TabScreens";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import StackNavigation from "./Stack";
 
 
 const TabIcon = ({ name, size, color }) => {
@@ -12,7 +13,9 @@ const Tab = createBottomTabNavigator();
 
 const TabNavigation = () => {
     return (
-        <Tab.Navigator initialRouteName="Mail">
+        <Tab.Navigator initialRouteName="Home">
+            <Tab.Screen name="Home" component={StackNavigation}
+                options={{ tabBarIcon: props => TabIcon({ ...props, name: 'home' }) }} />
             <Tab.Screen name="Mail" component={Mail}
                 options={{ tabBarLabel: 'Inbox', tabBarIcon: props => TabIcon({ ...props, name: 'email' }) }} />
             <Tab.Screen name="Meet" component={Meet}
