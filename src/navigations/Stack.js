@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../screens/Home';
 import List from '../screens/List';
 import Item from '../screens/Item';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,8 @@ const StackNavigation = () => {
                 borderBottomColor: '#34495e'
             }, headerTitleStyle: { color: 'white', fontSize: 30 },
             headerTitleAlign: 'center',
+            headerTitle: ({ style }) => (< MaterialCommunityIcons name="react" style={style} />),
+            headerBackTitle: 'Prev',
         }}>
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="List" component={List} />
