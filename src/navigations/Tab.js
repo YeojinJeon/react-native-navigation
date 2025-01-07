@@ -12,9 +12,9 @@ const Tab = createBottomTabNavigator();
 
 const TabNavigation = () => {
     return (
-        <Tab.Navigator initialRouteName="Settings">
+        <Tab.Navigator initialRouteName="Mail">
             <Tab.Screen name="Mail" component={Mail}
-                options={{ tabBarIcon: props => TabIcon({ ...props, name: 'email' }) }} />
+                options={{ tabBarLabel: 'Inbox', tabBarIcon: props => TabIcon({ ...props, name: 'email' }) }} />
             <Tab.Screen name="Meet" component={Meet}
                 options={{ tabBarIcon: props => TabIcon({ ...props, name: 'video' }) }} />
             <Tab.Screen name="Settings" component={Settings}
